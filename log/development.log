@@ -1373,3 +1373,60 @@ Processing SessionsController#new (for 127.0.0.1 at 2010-07-14 09:45:25) [GET]
 Rendering sessions/new
 Rendered shared/_devise_links (2.8ms)
 Completed in 40ms (View: 24, DB: 0) | 200 OK [http://localhost/users/sign_in?unauthenticated=true]
+  [4;36;1mSQL (1.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to DeviseCreateUsers (20100714022144)
+Migrating to CreateBeers (20100714160400)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("beers")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Processing BeersController#index (for 127.0.0.1 at 2010-07-14 12:05:05) [GET]
+  [4;36;1mBeer Load (1.5ms)[0m   [0;1mSELECT * FROM "beers" [0m
+Rendering template within layouts/beers
+Rendering beers/index
+Completed in 78ms (View: 65, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-07-14 12:05:45) [GET]
+Rendering registrations/new
+Rendered shared/_devise_links (2.0ms)
+Completed in 35ms (View: 23, DB: 0) | 200 OK [http://localhost/users/sign_up]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-07-14 12:05:49) [GET]
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/users/sign_out]
+
+
+Processing BeersController#index (for 127.0.0.1 at 2010-07-14 12:05:50) [GET]
+  [4;35;1mBeer Load (0.8ms)[0m   [0mSELECT * FROM "beers" [0m
+Rendering template within layouts/beers
+Rendering beers/index
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing BeersController#new (for 127.0.0.1 at 2010-07-14 12:05:53) [GET]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-14 12:05:53) [GET]
+  Parameters: {"unauthenticated"=>"true"}
+Rendering sessions/new
+Rendered shared/_devise_links (0.8ms)
+Completed in 30ms (View: 14, DB: 0) | 200 OK [http://localhost/users/sign_in?unauthenticated=true]
