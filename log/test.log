@@ -1,0 +1,160 @@
+
+
+Processing BeersController#index (for 0.0.0.0 at 2010-07-14 09:08:03) [GET]
+Rendering template within layouts/beers
+Rendering beers/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/beers]
+
+
+Processing BeersController#show (for 0.0.0.0 at 2010-07-14 09:08:03) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/beers
+Rendering beers/show
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/beers/37]
+
+
+Processing BeersController#new (for 0.0.0.0 at 2010-07-14 09:08:03) [GET]
+
+
+Processing BeersController#edit (for 0.0.0.0 at 2010-07-14 09:08:03) [GET]
+  Parameters: {"id"=>"37"}
+
+
+Processing BeersController#create (for 0.0.0.0 at 2010-07-14 09:08:03) [POST]
+  Parameters: {"beer"=>{"these"=>"params"}}
+
+
+Processing BeersController#create (for 0.0.0.0 at 2010-07-14 09:08:03) [POST]
+  Parameters: {"beer"=>{}}
+
+
+Processing BeersController#create (for 0.0.0.0 at 2010-07-14 09:08:03) [POST]
+  Parameters: {"beer"=>{"these"=>"params"}}
+
+
+Processing BeersController#create (for 0.0.0.0 at 2010-07-14 09:08:03) [POST]
+  Parameters: {"beer"=>{}}
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:08:03) [PUT]
+  Parameters: {"id"=>"37", "beer"=>{"these"=>"params"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:08:03) [PUT]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:08:03) [PUT]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:08:04) [PUT]
+  Parameters: {"id"=>"37", "beer"=>{"these"=>"params"}}
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:08:04) [PUT]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:08:04) [PUT]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#destroy (for 0.0.0.0 at 2010-07-14 09:08:04) [DELETE]
+  Parameters: {"id"=>"37"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BeersController#destroy (for 0.0.0.0 at 2010-07-14 09:08:04) [DELETE]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#index (for 0.0.0.0 at 2010-07-14 09:19:07) [GET]
+Rendering template within layouts/beers
+Rendering beers/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/beers]
+
+
+Processing BeersController#show (for 0.0.0.0 at 2010-07-14 09:19:07) [GET]
+  Parameters: {"id"=>"37"}
+Rendering template within layouts/beers
+Rendering beers/show
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/beers/37]
+
+
+Processing BeersController#new (for 0.0.0.0 at 2010-07-14 09:19:07) [GET]
+
+
+Processing BeersController#edit (for 0.0.0.0 at 2010-07-14 09:19:07) [GET]
+  Parameters: {"id"=>"37"}
+
+
+Processing BeersController#create (for 0.0.0.0 at 2010-07-14 09:19:07) [POST]
+  Parameters: {"beer"=>{"these"=>"params"}}
+
+
+Processing BeersController#create (for 0.0.0.0 at 2010-07-14 09:19:07) [POST]
+  Parameters: {"beer"=>{}}
+
+
+Processing BeersController#create (for 0.0.0.0 at 2010-07-14 09:19:07) [POST]
+  Parameters: {"beer"=>{"these"=>"params"}}
+
+
+Processing BeersController#create (for 0.0.0.0 at 2010-07-14 09:19:07) [POST]
+  Parameters: {"beer"=>{}}
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:19:07) [PUT]
+  Parameters: {"id"=>"37", "beer"=>{"these"=>"params"}}
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:19:07) [PUT]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:19:08) [PUT]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:19:08) [PUT]
+  Parameters: {"id"=>"37", "beer"=>{"these"=>"params"}}
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:19:08) [PUT]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#update (for 0.0.0.0 at 2010-07-14 09:19:08) [PUT]
+  Parameters: {"id"=>"1"}
+
+
+Processing BeersController#destroy (for 0.0.0.0 at 2010-07-14 09:19:08) [DELETE]
+  Parameters: {"id"=>"37"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing BeersController#destroy (for 0.0.0.0 at 2010-07-14 09:19:08) [DELETE]
+  Parameters: {"id"=>"1"}
