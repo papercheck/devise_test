@@ -1430,3 +1430,251 @@ Processing SessionsController#new (for 127.0.0.1 at 2010-07-14 12:05:53) [GET]
 Rendering sessions/new
 Rendered shared/_devise_links (0.8ms)
 Completed in 30ms (View: 14, DB: 0) | 200 OK [http://localhost/users/sign_in?unauthenticated=true]
+
+
+Processing BeersController#new (for 127.0.0.1 at 2010-07-14 12:26:29) [GET]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-14 12:26:29) [GET]
+  Parameters: {"unauthenticated"=>"true"}
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 26ms (View: 11, DB: 0) | 200 OK [http://localhost/users/sign_in?unauthenticated=true]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-14 12:26:43) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"MggExrolJXt9cYM9NsGrC0q0UF1DLnMG8XQgsNvR6uE=", "user"=>{"remember_me"=>"0", "password"=>"", "email"=>"dshafae"}}
+WARNING: Can't mass-assign these protected attributes: remember_me
+Rendering sessions/new
+Rendered shared/_devise_links (0.7ms)
+Completed in 27ms (View: 6, DB: 0) | 200 OK [http://localhost/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-14 12:27:01) [POST]
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"MggExrolJXt9cYM9NsGrC0q0UF1DLnMG8XQgsNvR6uE=", "user"=>{"remember_me"=>"0", "password"=>"password", "email"=>"dshafae@papercheck.com"}}
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'dshafae@papercheck.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-07-14 19:27:01', "sign_in_count" = 6, "current_sign_in_at" = '2010-07-14 19:27:01', "last_sign_in_at" = '2010-07-14 07:32:21' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/beers/new
+Completed in 236ms (DB: 2) | 302 Found [http://localhost/users/sign_in]
+
+
+Processing BeersController#new (for 127.0.0.1 at 2010-07-14 12:27:01) [GET]
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/beers
+Rendering beers/new
+Completed in 39ms (View: 16, DB: 1) | 200 OK [http://localhost/beers/new]
+
+
+Processing BeersController#index (for 127.0.0.1 at 2010-07-14 12:27:04) [GET]
+  [4;35;1mBeer Load (0.7ms)[0m   [0mSELECT * FROM "beers" [0m
+Rendering template within layouts/beers
+Rendering beers/index
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/beers]
+
+
+Processing BeersController#show (for 127.0.0.1 at 2010-07-14 12:27:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBeer Load (0.5ms)[0m   [0;1mSELECT * FROM "beers" WHERE ("beers"."id" = 1) [0m
+Rendering template within layouts/beers
+Rendering beers/show
+Completed in 25ms (View: 13, DB: 0) | 200 OK [http://localhost/beers/1]
+
+
+Processing BeersController#edit (for 127.0.0.1 at 2010-07-14 12:27:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (1.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mBeer Load (0.4ms)[0m   [0;1mSELECT * FROM "beers" WHERE ("beers"."id" = 1) [0m
+Rendering template within layouts/beers
+Rendering beers/edit
+Completed in 43ms (View: 21, DB: 2) | 200 OK [http://localhost/beers/1/edit]
+
+
+Processing BeersController#show (for 127.0.0.1 at 2010-07-14 12:27:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBeer Load (0.4ms)[0m   [0mSELECT * FROM "beers" WHERE ("beers"."id" = 1) [0m
+Rendering template within layouts/beers
+Rendering beers/show
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/beers/1]
+
+
+Processing BeersController#index (for 127.0.0.1 at 2010-07-14 12:27:35) [GET]
+  [4;36;1mBeer Load (0.7ms)[0m   [0;1mSELECT * FROM "beers" [0m
+Rendering template within layouts/beers
+Rendering beers/index
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/beers]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (193.3ms)[0m   [0;1mCREATE TABLE "beers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "brewer" varchar(255), "beer_name" varchar(255), "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (162.7ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "reset_password_token" varchar(255), "remember_token" varchar(255), "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (120.6ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;35;1mSQL (108.9ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;35;1mSQL (123.9ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (93.2ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("schema_migrations")[0m
+  [4;35;1mSQL (87.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (86.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100714160400')[0m
+  [4;35;1mSQL (88.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100714022144')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to DeviseCreateUsers (20100714022144)
+Migrating to CreateBeers (20100714160400)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("beers")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Processing BeersController#index (for 127.0.0.1 at 2010-07-14 12:33:54) [GET]
+  [4;35;1mBeer Load (2.6ms)[0m   [0mSELECT * FROM "beers" [0m
+Rendering template within layouts/beers
+Rendering beers/index
+Completed in 26ms (View: 14, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing BeersController#new (for 127.0.0.1 at 2010-07-14 12:33:57) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/beers
+Rendering beers/new
+Completed in 113ms (View: 12, DB: 1) | 200 OK [http://localhost/beers/new]
+
+
+Processing BeersController#create (for 127.0.0.1 at 2010-07-14 12:34:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"MggExrolJXt9cYM9NsGrC0q0UF1DLnMG8XQgsNvR6uE=", "beer"=>{"city"=>"Chico", "brewer"=>"Sierra Nevada", "beer_name"=>"Pale Ale", "state"=>"CA"}}
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mBeer Create (0.4ms)[0m   [0;1mINSERT INTO "beers" ("city", "created_at", "updated_at", "brewer", "beer_name", "state") VALUES('Chico', '2010-07-14 19:34:18', '2010-07-14 19:34:18', 'Sierra Nevada', 'Pale Ale', 'CA')[0m
+Redirected to http://localhost:3000/beers/2
+Completed in 150ms (DB: 2) | 302 Found [http://localhost/beers]
+
+
+Processing BeersController#show (for 127.0.0.1 at 2010-07-14 12:34:19) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mBeer Load (0.4ms)[0m   [0mSELECT * FROM "beers" WHERE ("beers"."id" = 2) [0m
+Rendering template within layouts/beers
+Rendering beers/show
+Completed in 18ms (View: 8, DB: 0) | 200 OK [http://localhost/beers/2]
+
+
+Processing BeersController#index (for 127.0.0.1 at 2010-07-14 12:34:22) [GET]
+  [4;36;1mBeer Load (1.2ms)[0m   [0;1mSELECT * FROM "beers" [0m
+Rendering template within layouts/beers
+Rendering beers/index
+Completed in 26ms (View: 17, DB: 1) | 200 OK [http://localhost/beers]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (137.1ms)[0m   [0;1mCREATE TABLE "beers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "brewer" varchar(255), "beer_name" varchar(255), "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (250.7ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "reset_password_token" varchar(255), "remember_token" varchar(255), "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (121.6ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;35;1mSQL (120.3ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;35;1mSQL (144.5ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (116.6ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("schema_migrations")[0m
+  [4;35;1mSQL (110.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (119.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100714160400')[0m
+  [4;35;1mSQL (110.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100714022144')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (159.1ms)[0m   [0;1mCREATE TABLE "beers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "brewer" varchar(255), "beer_name" varchar(255), "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (149.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "reset_password_token" varchar(255), "remember_token" varchar(255), "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (111.7ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;35;1mSQL (97.7ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;35;1mSQL (131.5ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (108.6ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("schema_migrations")[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (97.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100714160400')[0m
+  [4;35;1mSQL (88.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100714022144')[0m
